@@ -1,2 +1,2 @@
-# Analisis_estadistico_de_datos_de_Microbioma_con_R
-CursoPosgradoCCM
+# Análisis estadístico de datos de Microbioma con R
+Curso Posgrado CCM
