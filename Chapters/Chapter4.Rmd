@@ -14,27 +14,27 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(ALDEx2)
 
-installed.packages()[1:5,] # que paquetes estan instalados
+#installed.packages()[1:5,] # que paquetes estan instalados
 
 #Verificar si se cargó el paquete
-a<-installed.packages()
-packages<-a[,1]
-is.element("ALDEx2",packages) # está este paquete en el elemento 'packages´
+#a<-installed.packages()
+#packages<-a[,1]
+#is.element("ALDEx2",packages) # está este paquete en el elemento 'packages´
 
-getwd() #para ver en que directorio estamos (path)
+#getwd() #para ver en que directorio estamos (path)
 
-setwd("/home/betterlab/GIT/Intro_R") #crea un directorio especifico para trabajar,si queremos cambiar de getwd()
-getwd()
+#setwd("/home/betterlab/GIT/Intro_R") #crea un directorio especifico para trabajar,si queremos cambiar de getwd()
+#getwd()
 ```
 
 ```{r}
-data <- read.csv("data/hsb2demo.csv")
+data <- read.csv("D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/data/hsb2demo.csv")
 
 boxplot(write~female,data,main="High School Students Data",xlab="Gender",ylab="writing scoreby gender")
 ```
 
 ```{r}
-tab1 <- read.table("data/hsb2demo.csv",header=TRUE,row.names=1,sep="\t")
+tab1 <- read.table("D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/data/hsb2demo.csv",header=TRUE,row.names=1,sep="\t")
 tab1
 ```
 ```{r}
@@ -43,14 +43,14 @@ tab2 <- read.table(raw,sep='\t',header=TRUE,row.names=1,check.names=FALSE,string
 tab2
 ```
 ```{r}
-tab3 <- read.delim("data/hsb2demo.csv", header=T, row.names=1)
+tab3 <- read.delim("D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/data/hsb2demo.csv", header=T, row.names=1)
 tab3
 ```
 
 
 ```{r}
-tab4 <- read.csv('data/hsb2demo.csv',head=T,row.names=1,sep=',',dec='.')
-tab5 <- read.csv2('data/hsb2demo.csv',head=T,row.names=1,sep =';',dec=',')
+tab4 <- read.csv('D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/data/hsb2demo.csv',head=T,row.names=1,sep=',',dec='.')
+tab5 <- read.csv2('D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/data/hsb2demo.csv',head=T,row.names=1,sep =';',dec=',')
 ```
 
 
@@ -69,7 +69,7 @@ library(gdata)
 
 ```{r}
 #install.packages ("XLConnect") # este paquete sirve para manipular archivos de excel en windows.
-library (XLConnect)
+#library (XLConnect)
 ```
 
 ```{r}
@@ -155,7 +155,7 @@ iris[1,3] #se puede acceder por posicion
 
 iris["1","Petal.Length"] #o por nombre de fila y columna
 
-tab = read.csv("data/hsb2demo.csv",row.names=1,check.names=FALSE)
+tab = read.csv("D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/data/hsb2demo.csv",row.names=1,check.names=FALSE)
 sum(tab == 0) # podemos contar cuantos elementos del archivo son cero
 sum(tab != 0) #y cuantos son diferentes de cero
 ```
@@ -240,7 +240,7 @@ library("dplyr")
 ```
 
 ```{r}
-tab <- read.csv('data/hsb2demo.csv')
+tab <- read.csv('D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/data/hsb2demo.csv')
 head(tab)
 ```
 
