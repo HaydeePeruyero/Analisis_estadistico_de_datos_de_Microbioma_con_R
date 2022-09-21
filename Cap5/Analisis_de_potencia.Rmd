@@ -98,10 +98,10 @@ library(HMP)
 Cargamos los datos con frecuencias por género de cinco muestras con tratamiento de Butirato y de cinco muestras del grupo control.
 
 ```{r}
-Buty=read.csv("https://raw.githubusercontent.com/MJardon913/Analisis_de_microbioma_en_R/main/Data/ALSG93A3.5mButyrateGenus.csv",row.names=1,
+Buty=read.csv("D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/Cap5/Data/ALSG93A3.5mButyrateGenus.csv",row.names=1,
 check.names=FALSE)
 
-NOButy=read.csv("https://raw.githubusercontent.com/MJardon913/Analisis_de_microbioma_en_R/main/Data/ALSG93A3.5mNoButyrateGenus.csv",row.names=1, check.names=FALSE)
+NOButy=read.csv("D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/Cap5/Data/ALSG93A3.5mNoButyrateGenus.csv",row.names=1, check.names=FALSE)
 
 head(Buty)
 head(NOButy)
