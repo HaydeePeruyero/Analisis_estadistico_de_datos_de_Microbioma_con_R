@@ -1,0 +1,71 @@
+---
+title: "Medidas y cálculos de la diversidad Beta"
+output: html_document
+---
+
+# Medidas y cálculos de la diversidad beta
+
+```{r}
+options(width=65,digits=4)
+abund_table=read.csv("D:/Users/hayde/Documents/R_sites/Analisis_estadistico_de_datos_de_Microbioma_con_R/Cap5/Data/ALSG93A3.5mButyrateGenus.csv",row.names=1,
+check.names=FALSE)
+library(vegan)
+```
+
+El siguiente código de pocas líneas muestra que la estructura de datos is taxa (en este caso, géneros) por formato de muestra.
+```{r}
+head(abund_table)
+```
+
+
+La tabla de datos debe transformarse en muestras por taxones (géneros) antes de calcular varias diversidades.
+```{r}
+abund_table<-t(abund_table)
+head(abund_table)
+```
+
+## Índice de Jaccard
+
+Es cualitativo.
+
+\[\delta_j = \frac{a}{a+b+c}\]
+
+
+La medida de disimilitud de Jaccard se puede calcular usando la función vegdist() en el paquete Vegan
+```{r}
+jaccard<-vegdist(abund_table, "jaccard")
+jaccard
+```
+
+
+## Índice de Sorensen
+
+Es cualitativo
+
+\[S_s = \frac{2a}{2a+b+c}\]
+
+donde $a=$número de especies en la muestra $A$ y $B$, $b=$ nuúmero de muestras que están en $A$ pero no en $B$ y $c=$ número de muestras que están en $B$ pero no en $A$.
+
+```{r}
+Sorensen<-vegdist(abund_table, binary = TRUE)
+Sorensen
+```
+
+## Coeficiente de distancia (disemejanza): Índice Bray-Curtis
+
+```{r}
+bray<-vegdist(abund_table, "bray")
+bray
+```
+
+
+
+```{r}
+library(BiodiversityR)
+betadiver(help = TRUE)
+```
+
+
+```{r}
+betadiver(help = TRUE)
+```
